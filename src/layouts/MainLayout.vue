@@ -25,9 +25,7 @@
                 <q-item-section>
                   <q-item-label> PM Due </q-item-label>
 
-                  <q-item-label caption>
-                    22 equipment require preventive maintenance
-                  </q-item-label>
+                  <q-item-label caption> 22 equipment require preventive maintenance </q-item-label>
                 </q-item-section>
               </q-item>
 
@@ -41,9 +39,15 @@
                 <q-item-section>
                   <q-item-label> Calibration Due </q-item-label>
 
-                  <q-item-label caption>
-                    15 equipment require calibration
-                  </q-item-label>
+                  <q-item-label caption> 15 equipment require calibration </q-item-label>
+                </q-item-section>
+              </q-item>
+
+              <q-separator />
+
+              <q-item clickable v-close-pop-up to="notifications">
+                <q-item-section class="text-primary text-center">
+                  View all notifications
                 </q-item-section>
               </q-item>
             </q-list>
@@ -109,18 +113,6 @@
             <q-item-section> Work Orders </q-item-section>
           </q-item>
 
-          <q-item clickable v-ripple to="/notifications">
-            <q-item-section avatar>
-              <q-icon name="notifications" />
-            </q-item-section>
-
-            <q-item-section>
-              Notifications
-
-              <q-badge color="negative" class="q-ml-sm"> 5 </q-badge>
-            </q-item-section>
-          </q-item>
-
           <q-item clickable v-ripple to="/history">
             <q-item-section avatar>
               <q-icon name="history" />
@@ -131,9 +123,7 @@
 
           <q-separator class="q-my-md" />
 
-          <q-item-label header class="text-grey-7">
-            ADMINISTRATION
-          </q-item-label>
+          <q-item-label header class="text-grey-7"> ADMINISTRATION </q-item-label>
 
           <q-item clickable v-ripple to="/users">
             <q-item-section avatar>
@@ -170,11 +160,11 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref } from 'vue'
 
-const leftDrawerOpen = ref(true);
+const leftDrawerOpen = ref(true)
 
 function toggleLeftDrawer() {
-  leftDrawerOpen.value = !leftDrawerOpen.value;
+  leftDrawerOpen.value = !leftDrawerOpen.value
 }
 </script>
